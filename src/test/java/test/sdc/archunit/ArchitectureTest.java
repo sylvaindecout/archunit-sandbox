@@ -7,7 +7,6 @@ import com.tngtech.archunit.lang.ArchRule;
 import org.junit.runner.RunWith;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
-import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "test.sdc.archunit")
