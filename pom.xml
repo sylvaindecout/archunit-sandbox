@@ -18,7 +18,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Third-party dependency versions -->
-        <archunit.version>0.8.1</archunit.version>
+        <archunit.version>0.8.2</archunit.version>
         <lombok.version>1.16.22</lombok.version>
     </properties>
 
