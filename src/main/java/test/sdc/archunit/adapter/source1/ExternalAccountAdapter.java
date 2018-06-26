@@ -6,7 +6,7 @@ import test.sdc.archunit.service.ExternalAccountDataSource;
 import java.util.Collection;
 
 import static java.util.Arrays.asList;
-import static test.sdc.archunit.adapter.source1.AccountUtils.accountInEuros;
+import static test.sdc.archunit.adapter.source1.ExternalAccountUtils.accountInEuros;
 
 public final class ExternalAccountAdapter
         implements ExternalAccountDataSource {

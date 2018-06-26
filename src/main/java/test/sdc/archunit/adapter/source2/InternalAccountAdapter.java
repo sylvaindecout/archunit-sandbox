@@ -6,7 +6,7 @@ import test.sdc.archunit.service.InternalAccountDataSource;
 import java.util.Collection;
 
 import static java.util.Collections.singletonList;
-import static test.sdc.archunit.adapter.source1.AccountUtils.accountInEuros;
+import static test.sdc.archunit.adapter.source2.InternalAccountUtils.accountInEuros;
 
 public final class InternalAccountAdapter
         implements InternalAccountDataSource {
