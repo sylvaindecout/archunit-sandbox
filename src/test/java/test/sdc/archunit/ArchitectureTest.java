@@ -7,6 +7,7 @@ import com.tngtech.archunit.lang.ArchRule;
 import org.junit.runner.RunWith;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
+import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "test.sdc.archunit")
@@ -22,5 +23,11 @@ public class ArchitectureTest {
             .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller", "Adapter")
             .whereLayer("Adapter").mayNotBeAccessedByAnyLayer()
             .because("Service layer, aka Business, should not depend on other layers, which most likely require dependencies towards external systems");
+
+    @ArchTest
+    public static final ArchRule adapters_do_not_depend_on_one_another = slices()
+            .matching("test.sdc.archunit.(adapter).(*)..").namingSlices("$1 '$2'")
+            .should().notDependOnEachOther()
+            .because("Adapters should only depend on one external system; depending on other adapters is likely to imply pulling dependencies towards other external systems");
 
 }
