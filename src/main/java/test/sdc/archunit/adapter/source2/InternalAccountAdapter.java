@@ -5,14 +5,17 @@ import test.sdc.archunit.service.Account;
 
 import java.util.Collection;
 
-import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
+import static test.sdc.archunit.adapter.source1.AccountUtils.accountInEuros;
 
 public final class InternalAccountAdapter
         implements AccountAdapter {
 
     @Override
     public Collection<Account> getAccounts() {
-        return emptyList();
+        return singletonList(
+                accountInEuros("00001000001A",35_000_00)
+        );
     }
 
 }

@@ -12,20 +12,20 @@ public final class Account {
     Balance balance;
 
     @Value
-    private final class Id {
+    public static final class Id {
         String agencyCode;
         String accountNumber;
     }
 
     @Value
-    private final class Balance {
+    public static final class Balance {
         Money amount;
         Instant date;
     }
 
     @Value
-    private final class Money {
-        Long value;
+    public static final class Money {
+        long value;
         Currency currency;
     }
 

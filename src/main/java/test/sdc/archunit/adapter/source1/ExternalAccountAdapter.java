@@ -4,14 +4,18 @@ import test.sdc.archunit.service.Account;
 
 import java.util.Collection;
 
-import static java.util.Collections.emptyList;
+import static java.util.Arrays.asList;
+import static test.sdc.archunit.adapter.source1.AccountUtils.accountInEuros;
 
-public class ExternalAccountAdapter
+public final class ExternalAccountAdapter
         implements AccountAdapter {
 
     @Override
-    public Collection<Account> getAccounts(){
-        return emptyList();
+    public Collection<Account> getAccounts() {
+        return asList(
+                accountInEuros("000000000123456X",12_99),
+                accountInEuros("000000000987654T", -23_00)
+        );
     }
 
 }
