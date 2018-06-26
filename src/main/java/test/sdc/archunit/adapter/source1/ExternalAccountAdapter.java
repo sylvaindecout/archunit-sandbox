@@ -1,6 +1,7 @@
 package test.sdc.archunit.adapter.source1;
 
 import test.sdc.archunit.service.Account;
+import test.sdc.archunit.service.ExternalAccountDataSource;
 
 import java.util.Collection;
 

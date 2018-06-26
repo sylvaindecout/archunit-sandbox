@@ -1,4 +1,4 @@
-package test.sdc.archunit.adapter.source1;
+package test.sdc.archunit.service;
 
 import test.sdc.archunit.service.Account;
 
