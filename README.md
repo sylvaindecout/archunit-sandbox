@@ -8,7 +8,7 @@ Examples are included step by step, in dedicated branches named `StepX`.
 
 ## Steps
 ### Step 1: layer check
-Check that layer definition is respected. Basically, `Service layer is expected to be depended upon, but never to depend.
+Check that layer definition is respected. Basically, `Service` layer is expected to be depended upon, but never to depend.
 
 ### Step 2: slice check
 Check that slices of `Adapter` layer, i.e. adapters, do not depend on one another.

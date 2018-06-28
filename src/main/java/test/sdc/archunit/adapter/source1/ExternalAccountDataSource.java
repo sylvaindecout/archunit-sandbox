@@ -4,7 +4,7 @@ import test.sdc.archunit.service.Account;
 
 import java.util.Collection;
 
-public interface AccountAdapter {
+public interface ExternalAccountDataSource {
 
     Collection<Account> getAccounts();
 

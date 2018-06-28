@@ -8,7 +8,7 @@ import static java.util.Arrays.asList;
 import static test.sdc.archunit.adapter.source1.AccountUtils.accountInEuros;
 
 public final class ExternalAccountAdapter
-        implements AccountAdapter {
+        implements ExternalAccountDataSource {
 
     @Override
     public Collection<Account> getAccounts() {
